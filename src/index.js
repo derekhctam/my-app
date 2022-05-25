@@ -11,9 +11,9 @@ root.render(
   </React.StrictMode>
 );
 
-app.use(express.static(__dirname)); //here is important thing - no static directory, because all static :)
+App.use(express.static(__dirname)); //here is important thing - no static directory, because all static :)
 
-app.get("/*", function(req, res) {
+App.get("/*", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 // If you want to start measuring performance in your app, pass a function
